@@ -238,3 +238,42 @@ h1 {
         opacity: 1;
     }
 }
+
+/* 왼쪽 상단 네비게이션 버튼 */
+.top-left-button {
+    position: fixed; /* 화면에 고정 */
+    top: 20px;       /* 화면 상단에서 20px 떨어진 위치 */
+    left: 20px;      /* 화면 왼쪽에서 20px 떨어진 위치 */
+    padding: 10px 20px; /* 버튼 내부 여백 */
+    background-color: #3498db; /* 버튼 배경색 */
+    color: #fff;     /* 버튼 텍스트 색상 */
+    text-decoration: none; /* 링크의 밑줄 제거 */
+    border-radius: 5px; /* 버튼 모서리 둥글게 */
+    font-size: 1em;  /* 버튼 텍스트 크기 */
+    z-index: 1000;   /* 다른 요소보다 위에 표시 */
+    transition: background-color 0.3s, transform 0.2s; /* 호버 시 애니메이션 */
+}
+
+.top-left-button:hover {
+    background-color: #2980b9; /* 호버 시 배경색 변경 */
+    transform: translateY(-2px); /* 호버 시 살짝 위로 이동 */
+}
+
+/* 반응형 디자인: 작은 화면 */
+@media (max-width: 768px) {
+    .top-left-button {
+        padding: 8px 16px; /* 패딩 감소 */
+        font-size: 0.9em;  /* 텍스트 크기 감소 */
+        top: 10px;         /* 상단 여백 감소 */
+        left: 10px;        /* 왼쪽 여백 감소 */
+    }
+}
+
+@media (max-width: 480px) {
+    .top-left-button {
+        padding: 6px 12px; /* 패딩 추가 감소 */
+        font-size: 0.8em;  /* 텍스트 크기 추가 감소 */
+        top: 8px;          /* 상단 여백 추가 감소 */
+        left: 8px;         /* 왼쪽 여백 추가 감소 */
+    }
+}
